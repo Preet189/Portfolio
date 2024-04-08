@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Preet Gupta</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#qualifications">Qualifications</a></li>
+          <li><a href="#experience">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Preet Gupta</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#qualifications" onclick="toggleMenu()">Qualifications</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic2.png" alt="Preet Gupta profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Preet Gupta</h1>
+        <p class="section__text__p2"></p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Preet-Gupta-Resume1.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/preetgupta18/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Preet189'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about" class="section-spacing">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/profile-pic3.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div >
+              <!-- <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />  -->
+
+              <!-- <h3>Experience</h3>
+              <p>1 year <br />Data Science | Machine Learning | Artificial Intelligence</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.E. in Computer Engineering<br /> University Of Mumbai<br /> 2019-2023 <br />M.Sc. in Artificial Intelligence<br /> Stockholm University<br /> 2023-2024</p>
+            </div>
+          </div> -->
+          <div class="text-container">
+            <p style="font-size: 25px;">
+              I am Preet Gupta, a master’s student at Stockholm University specializing in Artificial Intelligence and Data Science. With practical experience garnered from internships and freelance projects, I have developed a strong foundation in data science and machine learning. My academic journey includes a noteworthy publication in IEEE Explore, where I delved into the utilization of blockchain for identifying counterfeit products.  I'm passionate about innovation and determined to push the boundaries of AI and data science to make meaningful contributions to the field.
+            </p>
+            <a href="https://ieeexplore.ieee.org/document/10392222">
+              <button
+              class="btn btn-color-1"
+              style="margin-top: 1rem;"
+            >
+              Paper
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section> 
+
+
+    <section id="qualifications" class="section-spacing"> 
+      <h1>Qualifications</h1>
+      <div class="btn-container">
+        <button id="internshipBtn"  class="btn btn-color-1" onclick="toggleQualifications('internship')">Experience</button>
+        <button id="universityBtn" class="btn btn-color-1" onclick="toggleQualifications('university')">University</button>
+      </div>
+      <div id="internshipQualifications">
+        <ul>
+            <li style="--accent-color:#41516C">
+                <div class="date">AI Intern</div>
+                <div class="title">Wyzbo · Internship <br> Oct 2022 - Mar 2023</div>
+                <div class="descr">Worked on a project that involved developing a resume scanning system that employed complex algorithms to extract significant keywords from resumes and match them with specific job descriptions. I was responsible for designing and implementing the algorithm and optimizing keyword extraction.</div>
+            </li>
+            <li style="--accent-color:#E24A68">
+                <div class="date">Machine Learning Intern</div>
+                <div class="title">Knowledge Solutions India · Internship <br> June 2021 - Sep 2021</div>
+                <div class="descr">Worked on a project to check whether the patient is likely to be diagnosed with any cardiovascular heart diseases based on their medical attributes such as gender, age, ChestPain, BloodPressure etc.</div>
+            </li>
+            <li style="--accent-color:#4CADAD">
+                <div class="date">Frontend Intern</div>
+                <div class="title">Ramrao Adik Institute of Technology · Internship <br> Feb 2021 - Apr 2021</div>
+                <div class="descr">Worked on a project that helps institute to maintain student demography on centralised system which can be accessed from anywhere in the campus. I was in charge of developing the portal's front end and designing it.</div>
+            </li>
+        </ul>
+      </div>
+      <div id="universityQualifications" style="display: none;">
+        <ul>
+            <li style="--accent-color:#FBCA3E">
+                <div class="date">Stockholm University</div>
+                <div class="title">MSc in Artificial Intelligence 2023-2024</div>
+                <div class="descr">Currently pursuing a Master's in Artificial Intelligence at Stockholm University, where I'm gaining expertise in Data Mining, Big Data with NoSQL databases, Machine Learning, and Natural Language Processing</div>
+            </li>
+            <li style="--accent-color:#1B5F8C">
+                <div class="date">University of Mumbai</div>
+                <div class="title">BE in Computer Engineering 2019-2023</div>
+                <div class="descr">Studied Computer Engineering at Ramrao Adik Institute of Technology, focusing on Operating Systems, Software Engineering, Database Management Systems, and Cloud Computing. Acquired practical skills essential for designing and implementing computing solutions.</div>
+            </li>
+        </ul>
+      </div>
+      <!-- <img
+      src="./assets/arrow.png"
+      alt="Arrow icon"
+      class="icon arrow"
+      onclick="location.href='./#experience'"
+    /> -->
+    </section>
+    
+    <script>
+      function toggleQualifications(section) {
+        if (section === 'internship') {
+          document.getElementById('internshipQualifications').style.display = 'block';
+          document.getElementById('universityQualifications').style.display = 'none';
+          document.getElementById('internshipBtn').classList.add('active');
+          document.getElementById('universityBtn').classList.remove('active');
+        } else if (section === 'university') {
+          document.getElementById('internshipQualifications').style.display = 'none';
+          document.getElementById('universityQualifications').style.display = 'block';
+          document.getElementById('internshipBtn').classList.remove('active');
+          document.getElementById('universityBtn').classList.add('active');
+        }
+      }
+    
+      // By default, show internship qualifications
+      toggleQualifications('internship');
+    </script>
+    
+
+    <section id="experience" class="section-spacing">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Skills</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <h2 class="experience-sub-title">Programming Languages and Data visualization tools</h2>
+              <div class="article-container">
+                <!-- Your articles for Programming Languages -->
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3 >Python</h3>
+                      <p >Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>SQL</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>C/C++</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>HTML</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>CSS </h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>JavaScript</h3>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Power BI & Tableu</h3>
+                      <p> Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Prolog</h3>
+                      <p>Basic</p>
+                    </div>
+                  </article>
+              </div>
+            </div>
+            <div class="details-container">
+              <h2 class="experience-sub-title">Frameworks & Libraries </h2>
+              <div class="article-container">
+                <!-- Your articles for Frontend Development -->
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Numpy</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Pandas</h3>
+                      <p>Experienced</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Matplotlib & Seaborn</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Sklearn</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>TensorFlow </h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Keras </h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3> OpenCV</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>NLTK </h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+              </div>
+            </div>
+            <!-- Adding a third card -->
+            <div class="details-container">
+              <h2 class="experience-sub-title">Key Competencies</h2>
+              <div class="article-container">
+                <!-- Your articles for Additional Skills -->
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="iconp"
+                  />
+                  <div>
+                    <h3>Machine Learning</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article>
+                <article>
+                  <img
+                    src="./assets/checkmark.png"
+                    alt="Experience icon"
+                    class="iconp"
+                  />
+                  <div>
+                    <h3> Deep Learning</h3>
+                    <p>Intermediate</p>
+                  </div>
+                </article> 
+                <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3> Natural Language Processing </h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article> 
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>BigData with NoSQL</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Data Warehouse & Data Modeling</h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                  <article>
+                    <img
+                      src="./assets/checkmark.png"
+                      alt="Experience icon"
+                      class="iconp"
+                    />
+                    <div>
+                      <h3>Microsoft Office Tools </h3>
+                      <p>Intermediate</p>
+                    </div>
+                  </article>
+                <!-- Add more articles as needed -->
+              </div>
+            </div>
+            <!-- End of third card -->
+          </div>
+        </div>
+      </section>
+      
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      /> -->
+    </section>
+    <section id="projects" class="section-spacing">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="row-container">
+              <!-- First Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project11.jpg" alt="Project 1" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Stock Price Prediction </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Stock_Price_Prediction'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+              <!-- Second Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project1.jpg" alt="Project 2" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title"> Movie Recommendation System</h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Movie_Recommendation_System'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+              <!-- Third Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project4.png" alt="Project 3" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Credit Card Fraud Detection </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Credit_Card_Fraud_Detection'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+            </div> <!-- End of First Row -->
+      
+            <!-- Second Row -->
+            <div class="row-container">
+              <!-- Fourth Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project5.jpg" alt="Project 4" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title"> Laptop Price Prediction </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Laptop_price_predictor'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+              <!-- Fifth Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project2.jpg" alt="Project 5" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title"> Email Spam Prediction </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Email_Spam_Prediction'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+              <!-- Sixth Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project3.jpg" alt="Project 6" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">  Titanic Survival  </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Titanic_Survival'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+            </div> <!-- End of Second Row -->
+      
+            <!-- Third Row -->
+            <div class="row-container">
+              <!-- Seventh Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project6.jpg" alt="Project 7" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title"> House Price Prediction </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/House_Price_Prediction'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+              <!-- Eighth Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project7.jpeg" alt="Project 8" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title"> Higher Study Admission Prediction </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Higher-Study-Admission-study'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+              <!-- Ninth Card -->
+              <div class="details-container color-container">
+                <div class="article-container">
+                  <img src="./assets/project8.png" alt="Project 8" class="project-img" />
+                </div>
+                <h2 class="experience-sub-title project-title">Diabetes Prediction </h2>
+                <div class="btn-container">
+                  <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Preet189/Diabetes_Prediction'">Github</button>
+                  <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">Live Demo</button> -->
+                </div>
+              </div>
+      
+      
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      /> -->
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:preetgupta189@gmail.com">preetgupta189@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="//www.linkedin.com/in/preetgupta18/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#experience">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- <p>Copyright &#169; 2024 Preet Gupta. All Rights Reserved.</p> -->
+    </footer>
+
+    <button
+        src="./assets/arrow.png"
+        type="button"
+        class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top"
+        >
+  <i class="icon arrow"></i>
+</button>
+
+      <!-- <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      /> -->
+
+    <script src="script.js"></script> 
+
+
+
+    
+
+
+    
+  </body>
+</html>
