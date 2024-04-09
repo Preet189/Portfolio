@@ -582,7 +582,7 @@ footer p {
 
 .details-container {
   flex: 1 1 30%; /* Adjust the width as needed */
-  margin: 50px; /* Adjust the margin for spacing */
+   /* Adjust the margin for spacing */
   max-width: 310px; /* Set a maximum width for each container */
 }
 

@@ -3,12 +3,6 @@
     height: 83vh;
     margin-bottom: 6rem;
   }
-  .about-containers {
-    flex-direction: column;
-  }
-  .conatiner{
-    flex-direction: column;
-  }
   #contact,
   #projects {
     height: fit-content;
@@ -47,6 +41,12 @@
   }
   .about-containers {
     margin-top: 0;
+  }
+  .about-containers {
+    flex-direction: column;
+  }
+  .row-container{
+    flex-direction: column;
   }
 }
 
