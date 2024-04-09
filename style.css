@@ -563,7 +563,6 @@ footer p {
 /* Adjust the height of the row-container */
 .row-container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
   height: 100%; /* Ensure all rows have equal height */
@@ -577,8 +576,8 @@ footer p {
 
 .about-containers {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
 }
 
 .details-container {

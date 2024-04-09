@@ -4,7 +4,10 @@
     margin-bottom: 6rem;
   }
   .about-containers {
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .conatiner{
+    flex-direction: column;
   }
   #contact,
   #projects {
